@@ -3,14 +3,16 @@ using System;
 using EntityPOC.Data.DatabaseContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EntityPOC.Data.Migrations
 {
     [DbContext(typeof(KanbanDatabaseContext))]
-    partial class KanbanDatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20220713193610_Adding_Color_Card")]
+    partial class Adding_Color_Card
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

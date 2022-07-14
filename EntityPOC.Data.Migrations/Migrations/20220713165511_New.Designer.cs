@@ -3,14 +3,16 @@ using System;
 using EntityPOC.Data.DatabaseContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EntityPOC.Data.Migrations
 {
     [DbContext(typeof(KanbanDatabaseContext))]
-    partial class KanbanDatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20220713165511_New")]
+    partial class New
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,9 +45,6 @@ namespace EntityPOC.Data.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("color")
-                        .HasColumnType("longtext");
-
                     b.HasKey("Id");
 
                     b.HasIndex("Name");
@@ -56,11 +55,11 @@ namespace EntityPOC.Data.Migrations
                         new
                         {
                             Id = 1500,
-                            CreatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 868, DateTimeKind.Utc).AddTicks(5606),
+                            CreatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 700, DateTimeKind.Utc).AddTicks(2157),
                             Description = "Default board created by data seeds",
                             Image = "https://docs.microsoft.com/en-us/ef/core/managing-schemas/migrations/projects?tabs=dotnet-core-cli",
                             Name = "Default - Board",
-                            UpdatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 868, DateTimeKind.Utc).AddTicks(6361)
+                            UpdatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 700, DateTimeKind.Utc).AddTicks(3047)
                         });
                 });
 
@@ -111,33 +110,33 @@ namespace EntityPOC.Data.Migrations
                             Id = 1500,
                             BoardId = 1500,
                             Color = "Red",
-                            CreatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 872, DateTimeKind.Utc).AddTicks(2445),
+                            CreatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 704, DateTimeKind.Utc).AddTicks(3827),
                             Description = "Default backlog column",
                             Header = "Backlog",
                             Name = "To-Dos",
-                            UpdatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 872, DateTimeKind.Utc).AddTicks(2482)
+                            UpdatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 704, DateTimeKind.Utc).AddTicks(3866)
                         },
                         new
                         {
                             Id = 1501,
                             BoardId = 1500,
                             Color = "Blue",
-                            CreatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 872, DateTimeKind.Utc).AddTicks(3190),
+                            CreatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 704, DateTimeKind.Utc).AddTicks(4459),
                             Description = "Default Current column",
                             Header = "Current",
                             Name = "Working on",
-                            UpdatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 872, DateTimeKind.Utc).AddTicks(3216)
+                            UpdatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 704, DateTimeKind.Utc).AddTicks(4482)
                         },
                         new
                         {
                             Id = 1502,
                             BoardId = 1500,
                             Color = "Green",
-                            CreatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 872, DateTimeKind.Utc).AddTicks(3245),
+                            CreatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 704, DateTimeKind.Utc).AddTicks(4500),
                             Description = "Default Done column",
                             Header = "Done",
                             Name = "Completed",
-                            UpdatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 872, DateTimeKind.Utc).AddTicks(3263)
+                            UpdatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 704, DateTimeKind.Utc).AddTicks(4517)
                         });
                 });
 
@@ -192,108 +191,108 @@ namespace EntityPOC.Data.Migrations
                             Id = 1000,
                             Attachment = "https://futbollibre.net/inicio/?tv",
                             BoardColumnId = 1500,
-                            CreatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 873, DateTimeKind.Utc).AddTicks(4448),
+                            CreatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 705, DateTimeKind.Utc).AddTicks(5893),
                             Description = "Test Description",
                             Image = "https://futbollibre.net/inicio/?tv",
                             Name = "Backog card 1",
                             Owner = "Reynaldo",
-                            UpdatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 873, DateTimeKind.Utc).AddTicks(4448)
+                            UpdatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 705, DateTimeKind.Utc).AddTicks(5893)
                         },
                         new
                         {
                             Id = 1001,
                             Attachment = "https://futbollibre.net/inicio/?tv",
                             BoardColumnId = 1500,
-                            CreatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 873, DateTimeKind.Utc).AddTicks(4448),
+                            CreatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 705, DateTimeKind.Utc).AddTicks(5893),
                             Description = "Test Description 2",
                             Image = "https://futbollibre.net/inicio/?tv",
                             Name = "Backog card 2",
                             Owner = "Reynaldo",
-                            UpdatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 873, DateTimeKind.Utc).AddTicks(4448)
+                            UpdatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 705, DateTimeKind.Utc).AddTicks(5893)
                         },
                         new
                         {
                             Id = 1002,
                             Attachment = "https://futbollibre.net/inicio/?tv",
                             BoardColumnId = 1500,
-                            CreatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 873, DateTimeKind.Utc).AddTicks(4448),
+                            CreatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 705, DateTimeKind.Utc).AddTicks(5893),
                             Description = "Test Description 3",
                             Image = "https://futbollibre.net/inicio/?tv",
                             Name = "Backog card 3",
                             Owner = "Reynaldo",
-                            UpdatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 873, DateTimeKind.Utc).AddTicks(4448)
+                            UpdatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 705, DateTimeKind.Utc).AddTicks(5893)
                         },
                         new
                         {
                             Id = 1003,
                             Attachment = "https://futbollibre.net/inicio/?tv",
                             BoardColumnId = 1501,
-                            CreatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 873, DateTimeKind.Utc).AddTicks(4448),
+                            CreatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 705, DateTimeKind.Utc).AddTicks(5893),
                             Description = "Test Description for Current",
                             Image = "https://futbollibre.net/inicio/?tv",
                             Name = "Current card 1",
                             Owner = "Reynaldo",
-                            UpdatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 873, DateTimeKind.Utc).AddTicks(4448)
+                            UpdatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 705, DateTimeKind.Utc).AddTicks(5893)
                         },
                         new
                         {
                             Id = 1004,
                             Attachment = "https://futbollibre.net/inicio/?tv",
                             BoardColumnId = 1501,
-                            CreatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 873, DateTimeKind.Utc).AddTicks(4448),
+                            CreatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 705, DateTimeKind.Utc).AddTicks(5893),
                             Description = "Test Description for Current 2",
                             Image = "https://futbollibre.net/inicio/?tv",
                             Name = "Current card 2",
                             Owner = "Reynaldo",
-                            UpdatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 873, DateTimeKind.Utc).AddTicks(4448)
+                            UpdatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 705, DateTimeKind.Utc).AddTicks(5893)
                         },
                         new
                         {
                             Id = 1005,
                             Attachment = "https://futbollibre.net/inicio/?tv",
                             BoardColumnId = 1501,
-                            CreatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 873, DateTimeKind.Utc).AddTicks(4448),
+                            CreatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 705, DateTimeKind.Utc).AddTicks(5893),
                             Description = "Test Description for Current 3",
                             Image = "https://futbollibre.net/inicio/?tv",
                             Name = "Current card 3",
                             Owner = "Reynaldo",
-                            UpdatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 873, DateTimeKind.Utc).AddTicks(4448)
+                            UpdatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 705, DateTimeKind.Utc).AddTicks(5893)
                         },
                         new
                         {
                             Id = 1006,
                             Attachment = "https://futbollibre.net/inicio/?tv",
                             BoardColumnId = 1502,
-                            CreatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 873, DateTimeKind.Utc).AddTicks(4448),
+                            CreatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 705, DateTimeKind.Utc).AddTicks(5893),
                             Description = "Test Description for Done",
                             Image = "https://futbollibre.net/inicio/?tv",
                             Name = "Done card 1",
                             Owner = "Reynaldo",
-                            UpdatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 873, DateTimeKind.Utc).AddTicks(4448)
+                            UpdatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 705, DateTimeKind.Utc).AddTicks(5893)
                         },
                         new
                         {
                             Id = 1007,
                             Attachment = "https://futbollibre.net/inicio/?tv",
                             BoardColumnId = 1502,
-                            CreatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 873, DateTimeKind.Utc).AddTicks(4448),
+                            CreatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 705, DateTimeKind.Utc).AddTicks(5893),
                             Description = "Test Description for Done 2",
                             Image = "https://futbollibre.net/inicio/?tv",
                             Name = "Done card 2",
                             Owner = "Reynaldo",
-                            UpdatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 873, DateTimeKind.Utc).AddTicks(4448)
+                            UpdatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 705, DateTimeKind.Utc).AddTicks(5893)
                         },
                         new
                         {
                             Id = 1008,
                             Attachment = "https://futbollibre.net/inicio/?tv",
                             BoardColumnId = 1502,
-                            CreatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 873, DateTimeKind.Utc).AddTicks(4448),
+                            CreatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 705, DateTimeKind.Utc).AddTicks(5893),
                             Description = "Test Description for Done 3",
                             Image = "https://futbollibre.net/inicio/?tv",
                             Name = "Done card 3",
                             Owner = "Reynaldo",
-                            UpdatedAt = new DateTime(2022, 7, 13, 19, 36, 8, 873, DateTimeKind.Utc).AddTicks(4448)
+                            UpdatedAt = new DateTime(2022, 7, 13, 16, 55, 9, 705, DateTimeKind.Utc).AddTicks(5893)
                         });
                 });
 
