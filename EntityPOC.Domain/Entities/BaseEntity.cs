@@ -1,4 +1,5 @@
 using System;
+using System.Text.Json.Serialization;
 
 namespace EntityPOC.Domain.Entities
 {
@@ -12,8 +13,12 @@ namespace EntityPOC.Domain.Entities
 		public string Name { get; set; }
 		public string? Description { get; set; }
 		public int Id { get; set; }
+
+		[JsonIgnore]
 		public DateTime CreatedAt { get; set; }
+		[JsonIgnore]
 		public DateTime UpdatedAt { get; set; }
+		[JsonIgnore]
 		public DateTime? DeletedAt { get; set; }
 	}
 }

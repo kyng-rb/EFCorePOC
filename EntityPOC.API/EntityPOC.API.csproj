@@ -6,19 +6,13 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EntityPOC.Domain\EntityPOC.Domain.csproj" />
     <ProjectReference Include="..\EntityPOC.Data.Migrations\EntityPOC.Data.Migrations.csproj" />
     <ProjectReference Include="..\EntityPOC.Data\EntityPOC.Data.csproj" />
-    <ProjectReference Include="..\EntityPOC.Domain\EntityPOC.Domain.csproj" />
   </ItemGroup>
 
 </Project>
