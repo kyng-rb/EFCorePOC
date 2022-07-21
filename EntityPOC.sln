@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityPOC.Data", "EntityPOC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityPOC.API", "EntityPOC.API\EntityPOC.API.csproj", "{1C7D791F-EB91-4E13-BE9B-3DE112B40CBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityPOC.Data.Migrations", "EntityPOC.Data.Migrations\EntityPOC.Data.Migrations.csproj", "{168B0587-A8CE-408A-A96A-74A924C5E59D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{1C7D791F-EB91-4E13-BE9B-3DE112B40CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C7D791F-EB91-4E13-BE9B-3DE112B40CBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C7D791F-EB91-4E13-BE9B-3DE112B40CBF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{168B0587-A8CE-408A-A96A-74A924C5E59D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{168B0587-A8CE-408A-A96A-74A924C5E59D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{168B0587-A8CE-408A-A96A-74A924C5E59D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{168B0587-A8CE-408A-A96A-74A924C5E59D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

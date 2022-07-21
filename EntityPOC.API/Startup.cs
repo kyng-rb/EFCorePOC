@@ -14,7 +14,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using EntityPOC.Data.Migrations;
 using System.Text.Json.Serialization;
 
 namespace EntityPOC.API
@@ -35,10 +34,7 @@ namespace EntityPOC.API
 
 			services.ConfigureSwaggerService();
 
-			var connectionString = Configuration.GetConnectionString("Default");
-			var databaseServerVersion = Configuration.GetSection("DatabaseServerVersion");
-
-			services.AddEntityFramework(connectionString, databaseServerVersion.Value);
+			services.AddEntityFramework();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

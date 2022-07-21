@@ -1,17 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\EntityPOC.Domain\EntityPOC.Domain.csproj" />
-    <ProjectReference Include="..\EntityPOC.Data.Migrations\EntityPOC.Data.Migrations.csproj" />
     <ProjectReference Include="..\EntityPOC.Data\EntityPOC.Data.csproj" />
   </ItemGroup>
 
