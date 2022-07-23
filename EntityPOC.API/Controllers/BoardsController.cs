@@ -33,12 +33,7 @@ namespace EntityPOC.API.Controllers
 		{
 			var board = await _context.Boards.FindAsync(id);
 
-			if (board == null)
-			{
-				return NotFound();
-			}
-
-			return board;
+			return board ?? (ActionResult<Board>)NotFound();
 		}
 
 		// PUT: api/Boards/5

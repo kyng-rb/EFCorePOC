@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using EntityPOC.Data.DatabaseContext;
@@ -34,12 +32,7 @@ namespace EntityPOC.API.Controllers
 		{
 			var boardColumn = await _context.BoardColumns.FindAsync(id);
 
-			if (boardColumn == null)
-			{
-				return NotFound();
-			}
-
-			return boardColumn;
+			return boardColumn ?? (ActionResult<BoardColumn>)NotFound();
 		}
 
 		// PUT: api/BoardColumns/5
